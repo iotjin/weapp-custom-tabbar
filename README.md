@@ -1,5 +1,5 @@
 # weapp-custom-tabbar
-小程序 - 自定义tabBar组件，动态设置、更新tabbar，无闪烁
+小程序 - 自定义tabBar组件，可动态设置、更新，无闪烁
 
 <img src="https://gitee.com/iotjh/Picture/raw/master/weapp/tabbar.gif" width="208" height="404">
 
