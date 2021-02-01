@@ -1,7 +1,9 @@
 # weapp-custom-tabbar
 小程序 - 自定义tabBar组件，动态设置、更新tabbar，无闪烁
 
-![自定义tabBar][https://gitee.com/iotjh/Picture/raw/master/weapp/tabbar.gif]
+<img src="https://gitee.com/iotjh/Picture/raw/master/weapp/tabbar.gif" width="208" height="404">
+
+<br>
 
 1、custom-tab-bar导入项目根目录 <br>
 2、app.json中设置"custom": true <br>
