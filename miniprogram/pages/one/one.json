@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-switch": "@vant/weapp/switch/index"
+  }
+}

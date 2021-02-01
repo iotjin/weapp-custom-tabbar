@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/one/one",
+    "pages/two/two",
+    "pages/three/three"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4252DD",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#cdcdcd",
+    "selectedColor": "#4252DD",
+    "list": [{
+        "text": "页面一",
+        "pagePath": "pages/one/one",
+        "iconPath": "images/tab/tab1.png",
+        "selectedIconPath": "images/tab/tab1_select.png"
+      },
+      {
+        "text": "页面二",
+        "pagePath": "pages/two/two",
+        "iconPath": "images/tab/tab2.png",
+        "selectedIconPath": "images/tab/tab2_select.png"
+      },
+      {
+        "text": "页面三",
+        "pagePath": "pages/three/three",
+        "iconPath": "images/tab/tab2.png",
+        "selectedIconPath": "images/tab/tab2_select.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

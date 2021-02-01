@@ -1,0 +1,4 @@
+<text>pages/one/one.wxml</text>
+<view>1111111</view>
+<text>更新tabbar</text>
+<van-switch checked="{{ checked }}" bind:change="onChange" />

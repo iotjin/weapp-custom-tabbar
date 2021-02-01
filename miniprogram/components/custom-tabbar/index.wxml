@@ -1,0 +1,34 @@
+<!-- 页面展示 -->
+<view hidden="{{currentTabBar == 0? false: true}}">
+  <page1 />
+</view>
+<view hidden="{{currentTabBar == 1? false: true}}">
+  <page2 />
+</view>
+
+<!-- 自定义 tabbar -->
+<van-tabbar active-color="#07c160" active="{{ currentTabBar }}" bind:change="onChangeTabbar" placeholder="true">
+  <block wx:for="{{tabbars}}" wx:key="index">
+    <block wx:if="{{item.info.length}}">
+      <van-tabbar-item info='{{item.info}}'>
+        <image slot="icon" src="{{ item.tab }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        <image slot="icon-active" src="{{ item.tab_sel }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        {{item.text}}
+      </van-tabbar-item>
+    </block>
+    <block wx:elif="{{item.isShowRedDot}}">
+      <van-tabbar-item dot>
+        <image slot="icon" src="{{ item.tab }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        <image slot="icon-active" src="{{ item.tab_sel }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        {{item.text}}
+      </van-tabbar-item>
+    </block>
+    <block wx:else>
+      <van-tabbar-item>
+        <image slot="icon" src="{{ item.tab }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        <image slot="icon-active" src="{{ item.tab_sel }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        {{item.text}}
+      </van-tabbar-item>
+    </block>
+  </block>
+</van-tabbar>
