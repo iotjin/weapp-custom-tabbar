@@ -5,6 +5,8 @@
 
 <br>
 
+### 实现步骤
+
 1、custom-tab-bar导入项目根目录 <br>
 2、app.json中设置"custom": true <br>
 3、在tabPage的onShow方法中调用更新方法 <br>
