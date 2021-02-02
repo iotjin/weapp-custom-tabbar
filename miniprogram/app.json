@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/tabbar/index",
     "pages/one/one",
     "pages/two/two",
     "pages/three/three"

@@ -4,26 +4,29 @@
     <block wx:for="{{tabbars}}" wx:key="index">
       <block wx:if="{{item.info.length}}">
         <van-tabbar-item info='{{item.info}}'>
-          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 25px; height: 25px;" />
           <image slot="icon-active" src="{{ item.selectedIconPath }}" mode="aspectFit"
-            style="width: 30px; height: 18px;" />
-          {{item.text}}
+            style="width: 25px; height: 25px;" />
+          <!-- {{item.text}} -->
+          <view class="text">{{item.text}}</view>
         </van-tabbar-item>
       </block>
       <block wx:elif="{{item.isShowRedDot}}">
         <van-tabbar-item dot>
-          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 25px; height: 25px;" />
           <image slot="icon-active" src="{{ item.selectedIconPath }}" mode="aspectFit"
-            style="width: 30px; height: 18px;" />
-          {{item.text}}
+            style="width: 25px; height: 25px;" />
+          <!-- {{item.text}} -->
+          <view class="text">{{item.text}}</view>
         </van-tabbar-item>
       </block>
       <block wx:else>
-        <van-tabbar-item>
-          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 30px; height: 18px;" />
+        <van-tabbar-item style="color:red;">
+          <image slot="icon" src="{{ item.iconPath }}" mode="aspectFit" style="width: 25px; height: 25px;" />
           <image slot="icon-active" src="{{ item.selectedIconPath }}" mode="aspectFit"
-            style="width: 30px; height: 18px;" />
-          {{item.text}}
+            style="width: 25px; height: 25px;" />
+          <!-- {{item.text}} -->
+          <view class="text">{{item.text}}</view>
         </van-tabbar-item>
       </block>
     </block>

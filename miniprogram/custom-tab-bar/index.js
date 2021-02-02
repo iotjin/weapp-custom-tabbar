@@ -6,7 +6,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    selected: 0,
+    selected: null,
     color: "#7d7e80",
     selectedColor: "#1989fa",
     tabbars: [],
@@ -38,16 +38,16 @@ Component({
     tabbars2: [{
         isShowRedDot: false,
         info: '',
-        text: '模块一',
-        pagePath: "/pages/one/one",
+        text: '模块二',
+        pagePath: "/pages/two/two",
         iconPath: 'https://img.yzcdn.cn/vant/user-inactive.png',
         selectedIconPath: 'https://img.yzcdn.cn/vant/user-active.png',
       },
       {
         isShowRedDot: false,
         info: '',
-        text: '模块二',
-        pagePath: "/pages/two/two",
+        text: '模块三',
+        pagePath: "/pages/three/three",
         iconPath: 'https://img.yzcdn.cn/vant/user-inactive.png',
         selectedIconPath: 'https://img.yzcdn.cn/vant/user-active.png',
       }
@@ -70,22 +70,9 @@ Component({
       wx.switchTab({
         url: path
       })
-      this.setData({
-        selected: index
-      })
-    },
-    //在tabPage的onShow方法中调用
-    switchSelectedTab(currentIndex) {
-      if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        // console.log('选中项' + currentIndex)
-        this.getTabBar().setData({
-          selected: currentIndex
-        })
-        // this.getTabBar().setData({
-        //   ['tabbars[0].text']: 'currentIndex'
-        // })
-      }
+      // this.setData({
+      //   selected: index
+      // })
     },
     //检查用户类型
     checkUserType() {
@@ -99,8 +86,23 @@ Component({
           tabbars: this.data.tabbars2
         })
       }
-
-    }
+    },
+    //在tabPage的onShow方法中调用
+    switchTab(currentIndex) {
+      if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        // console.log('选中项' + currentIndex)
+        if (app.userType == 'normal') {
+          currentIndex = currentIndex - 1
+        }
+        this.getTabBar().setData({
+          selected: currentIndex
+        })
+        // this.getTabBar().setData({
+        //   ['tabbars[0].text']: 'currentIndex'
+        // })
+      }
+    },
   },
 
 

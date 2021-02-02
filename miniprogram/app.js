@@ -55,8 +55,8 @@ App({
       }
     })
   },
-  checkUserType(){
-    
+  checkUserType() {
+
   }
 
 

@@ -12,29 +12,31 @@ Component({
     },
   },
   data: {
-    currentTabBar: 0,
+    selected: 0,
     isShowTabbar: true,
+    color: "#7d7e80",
+    selectedColor: "#1989fa",
     tabbars: [],
     tabbars0: [{
         isShowRedDot: true,
         info: '',
         text: '模块一',
-        tab: 'https://img.yzcdn.cn/vant/user-inactive.png',
-        tab_sel: 'https://img.yzcdn.cn/vant/user-active.png',
+        iconPath: 'https://img.yzcdn.cn/vant/user-inactive.png',
+        selectedIconPath: 'https://img.yzcdn.cn/vant/user-active.png',
       },
       {
         isShowRedDot: false,
         info: '5',
         text: '模块二',
-        tab: 'https://img.yzcdn.cn/vant/user-inactive.png',
-        tab_sel: 'https://img.yzcdn.cn/vant/user-active.png',
+        iconPath: 'https://img.yzcdn.cn/vant/user-inactive.png',
+        selectedIconPath: 'https://img.yzcdn.cn/vant/user-active.png',
       },
       {
         isShowRedDot: false,
         info: '5',
         text: '模块三',
-        tab: 'https://img.yzcdn.cn/vant/user-inactive.png',
-        tab_sel: 'https://img.yzcdn.cn/vant/user-active.png',
+        iconPath: 'https://img.yzcdn.cn/vant/user-inactive.png',
+        selectedIconPath: 'https://img.yzcdn.cn/vant/user-active.png',
       }
     ],
   },
@@ -46,9 +48,9 @@ Component({
     onChangeTabbar(event) {
       var index = event.detail
       this.setData({
-        currentTabBar: index
+        selected: index
       });
-      this.triggerEvent('onChangeTabbar', this.data.currentTabBar);
+      this.triggerEvent('onChangeTabbar', this.data.selected);
     }
   },
   lifetimes: {
