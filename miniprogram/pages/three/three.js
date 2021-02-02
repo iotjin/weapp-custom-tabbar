@@ -1,11 +1,12 @@
 // pages/three/three.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    bottomHeight: app.kBottomSafeHeight + 50
   },
 
   /**

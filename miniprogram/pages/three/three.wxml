@@ -1,2 +1,7 @@
 <!--pages/three/three.wxml-->
-<text>pages/three/three.wxml</text>
+<view class="bg" style="padding-bottom:{{bottomHeight}}px">
+  <text>pages/three/three.wxml</text>
+  <view wx:for="{{100}}" wx:key="index">
+    <view>{{item}}</view>
+  </view>
+</view>
